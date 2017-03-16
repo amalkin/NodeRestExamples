@@ -10,6 +10,8 @@
         "express": "^4.12.4",
         "mongoose": "^4.0.5",
         "node-restful": "^0.1.17",
-        "mysql": "latest"
+        "mysql": "latest",
+        "request-promise": "^4.1.1",
+        "aws-sdk": "^2.4.1"
     }
 }
