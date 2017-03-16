@@ -14,7 +14,12 @@ config.aws.database = 'stagingdb';
 
 
 config.mysql.productquery = 'SELECT * FROM stagingdb.product ORDER BY date_modified LIMIT 20;';
-config.mysql.productquery_results_file = './data/producttable.json';
+config.mysql.productproduct_results_file = './data/producttable.json';
 
+config.mysql.productproductdescriptionquery = 'SELECT p.product_id, p.sku, p.quantity, p.stock_status_id, p.price, p.weight, p.length, p.width, p.height, pd.name, pd.description, pd.details, pd.long_description, pd.details FROM stagingdb.product p, stagingdb.product_description pd WHERE p.product_id = pd.product_id ORDER BY date_modified DESC LIMIT 10;'
+config.mysql.productproductdescriptionquery_results_file = './data/productproductdescriptiontable.json';
+
+config.mysql.productproductdescriptionlistquery = 'SELECT p.product_id, p.sku, pd.name FROM stagingdb.product p, stagingdb.product_description pd WHERE p.product_id = pd.product_id ORDER BY date_modified DESC LIMIT 10;'
+config.mysql.productproductdescriptionlistquery_results_file = './data/productproductdescriptionlisttable.json';
 
 module.exports = config;

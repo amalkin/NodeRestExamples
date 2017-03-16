@@ -1,5 +1,5 @@
 var express = require('express'),
-    employees = require('./routes/employees'),
+    aladdinstreet_products = require('./routes/aladdinstreet-products'),
     app = express();
 
 app.use(express.static('www'));
@@ -11,9 +11,9 @@ app.all('*', function(req, res, next) {
     next();
 });
 
-app.get('/employees', employees.findAll);
-app.get('/employees/:id', employees.findById);
-app.get('/employees/:id/reports', employees.findReports);
+app.get('/products', aladdinstreet_products.findAllProducts);
+app.get('/products/:id', aladdinstreet_products.findMockById);
+app.get('/products/:id/reports', aladdinstreet_products.findMockReports);
 
 app.set('port', process.env.PORT || 5000);
 
