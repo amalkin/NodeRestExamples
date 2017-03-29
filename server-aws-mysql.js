@@ -40,7 +40,7 @@ connection.connect(function(err){
 
         console.log("Date: ",utilsHelper.getFormattedDate(new Date()));
 
-        console.log('Connected as id ' + connection.threadId);
+        console.log('!err Connected as id ' + connection.threadId);
 
     } else {
         console.log("Error connecting to AWS database ... "+err);
@@ -54,7 +54,7 @@ connection.connect(function(err){
 
         console.log("Date: ",utilsHelper.getFormattedDate(new Date()));
 
-        console.log('Connected as id ' + connection.threadId);
+        console.log('ERROR Connected as id ' + connection.threadId);
 
         //fs.writeFile(cfg.error_file, "Hey there!", function(err) {
         //    if(err) {
@@ -68,7 +68,7 @@ connection.connect(function(err){
 });
 
 connection.query(cfg.mysql.productproductdescriptionquery, function(err, results, fields) {
-    if(err) throw err;
+    //if(err) throw err;
 
     var json = '';
 

@@ -15,7 +15,7 @@ var connection = mysql.createConnection({
 });
 
 exports.findAllProducts = function (req, res, next) {
-    console.log("[findAll]");
+    console.log("[findAllProducts]");
     
     connection.query(cfg.mysql.productproductdescriptionlistquery, function(err, results, fields) {
         var products = '';
