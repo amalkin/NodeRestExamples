@@ -67,14 +67,14 @@ connection.connect(function(err){
     }
 });
 
-connection.query(cfg.mysql.productproductdescriptionquery, function(err, results, fields) {
+connection.query(cfg.mysql.productquery, function(err, results, fields) {
     //if(err) throw err;
 
     var json = '';
 
     json = JSON.stringify(results);
 
-    fs.writeFile(cfg.mysql.productproductdescriptionquery_results_file, json, function (err) {
+    fs.writeFile(cfg.mysql.productquery_results_file, json, function (err) {
         if (err) throw err;
         console.log('[producttable] Saved!');
         

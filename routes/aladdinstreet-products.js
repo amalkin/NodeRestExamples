@@ -27,6 +27,34 @@ exports.findAllProducts = function (req, res, next) {
 
 };
 
+exports.findAllRootCategories = function (req, res, next) {
+    console.log("[findAllRootCategories]");
+    
+    connection.query(cfg.mysql.categoryrootlistquery, function(err, results, fields) {
+        var products = '';
+
+        products = JSON.stringify(results);
+
+        res.send(results);
+    })
+
+};
+
+exports.findCategoriesById = function (req, res, next) {
+    console.log("[findCategoriesById]");
+    var id = req.params.id;
+    console.log("[findCategoriesById] id ", id);
+    
+    connection.query(cfg.mysql.categorybyidlistquery, function(err, results, fields) {
+        var products = '';
+
+        products = JSON.stringify(results);
+
+        res.send(results);
+    })
+
+};
+
 exports.findMockAll = function (req, res, next) {
     console.log("[findMockAll]");
     var name = req.query.name;
