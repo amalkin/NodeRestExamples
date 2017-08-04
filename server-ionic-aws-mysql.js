@@ -15,6 +15,9 @@ app.get('/products', aladdinstreet_products.findAllProducts);
 app.get('/products/:id', aladdinstreet_products.findMockById);
 app.get('/products/:id/reports', aladdinstreet_products.findMockReports);
 
+app.get('/categories', aladdinstreet_products.findAllRootCategories);
+app.get('/categories/:id', aladdinstreet_products.findCategoriesById);
+
 app.set('port', process.env.PORT || 5000);
 
 app.listen(app.get('port'), function () {
