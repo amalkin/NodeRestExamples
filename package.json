@@ -1,18 +1,19 @@
 {
-    "name": "ReSTAPI",
-    "version": "1.0.0",
-    "description": "A simple RESTFul API created using nodejs that talk to xxx database",
-    "main": "index.js",
-    "author": "GSS Adobe",
-    "license": "ISC",
-    "dependencies": {
-        "body-parser": "^1.9.0",
-        "express": "^4.12.4",
-        "mongoose": "^4.0.5",
-        "node-restful": "^0.1.17",
-        "mysql": "latest",
-        "request-promise": "^4.1.1",
-        "aws-sdk": "^2.4.1",
-        "multer" : "0.1.6" //For server-ionic-server-upload
-    }
+  "name": "ReSTAPI",
+  "version": "1.0.0",
+  "description": "A simple RESTFul API created using nodejs that talk to xxx database",
+  "main": "index.js",
+  "author": "GSS Adobe",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.4.1",
+    "body-parser": "^1.9.0",
+    "express": "^4.12.4",
+    "mongoose": "^4.0.5",
+    "multer": "0.1.6",
+    "mysql": "latest",
+    "node-restful": "^0.1.17",
+    "request": "^2.81.0",
+    "request-promise": "^4.1.1"
+  }
 }

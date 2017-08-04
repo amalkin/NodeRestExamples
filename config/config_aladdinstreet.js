@@ -6,11 +6,17 @@ config.mysql = {};
 config.default_stuff = ['red','green','blue','apple','yellow','orange','politics'];
 config.error_file = 'error.txt';
 
-config.aws.host = 'stagingdb.cqycz0fat2nu.ap-southeast-1.rds.amazonaws.com';
+/*config.aws.host = 'stagingdb.cqycz0fat2nu.ap-southeast-1.rds.amazonaws.com';
 config.aws.port = '3306';
 config.aws.user = 'adobe';
 config.aws.password = 'sl!8eAy@kC';
-config.aws.database = 'stagingdb';
+config.aws.database = 'stagingdb';*/
+
+config.aws.host = 'stagingdb.crkumysjw1y3.eu-west-1.rds.amazonaws.com';
+config.aws.port = '3306';
+config.aws.user = 'adobe-am';
+config.aws.password = 'sl8eAykC';
+config.aws.database = 'aladdinstreet';
 
 
 config.mysql.productquery = 'SELECT * FROM stagingdb.product ORDER BY date_modified LIMIT 20;';
